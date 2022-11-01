@@ -1,0 +1,38 @@
+{
+  "name": "blue_easy_server",
+  "version": "1.0.0",
+  "description": "servidor blue easy",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "blueeasy",
+    "tubs"
+  ],
+  "author": "Emanuel Richard",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "https://github.com/emanuelrichard/EmanuelRichard/blob/main/README.md",
+  "dependencies": {
+    "@assistant/conversation": "^3.3.0",
+    "actions-on-google": "^2.13.0",
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "firebase-admin": "^9.9.0",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.11.15",
+    "mqtt": "^4.2.6",
+    "nodemailer": "^6.5.0",
+    "oauth2orize": "^1.11.0",
+    "passport": "^0.4.1",
+    "passport-http": "^0.3.0",
+    "passport-http-bearer": "^1.0.1"
+  }
+}

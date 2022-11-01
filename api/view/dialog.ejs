@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>Controle CAS</title>
+</head>
+<style>
+  html, body {
+    margin: 0;
+    background-color: #222;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.outer_div {
+    border-style: outset;
+    padding: 16px;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    border-radius: 15px;
+}
+
+.alexa {
+    background-color: aliceblue;
+    background-image: url('/public1/img/alexa.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center right;
+}
+
+.home {
+    background-color: floralwhite;
+    background-image: url('/public1/img/home.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center right;
+}
+
+.greetings {
+    font-size: 2.15em;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.content-lg {
+    font-size: 1.5em;
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+
+.content-md {
+    font-size: 1.2em;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.button-allow {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 15px;
+    width: 49%
+}
+
+.button-disallow {
+    background-color: #AF4C50; /* Red */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 15px;    
+    width: 49%
+}
+
+@media screen and (max-width:850px) {
+    .outer_div {
+        width: 80%;
+    }    
+}
+  </style>
+
+<body>
+  <div class="outer_div <%= clazz %>">
+    <p class="greetings">Olá
+      <%= user.name %>!</p>
+    <p class="content-lg"><b>
+        <%= client.name %></b> está requisitando <b>acesso</b> à sua conta. Este acesso incluí:</p>
+    <p class="content-md"> - Acesso ao endereço de <b>e-mail cadastrado</b> na plataforma CAS;</p>
+    <p class="content-md"> - Acesso a(s) <b>banheira(s) cadastrada(s)</b> em sua conta;</p>
+    <p class="content-md"> - Acesso ao <b>estado da(s) banheira(s)</b> cadastrada(s) em sua conta;</p>
+    <p class="content-lg">Esta permissão é necessária para que você possa controlar seus dispositivos através de <b>
+        <%= client.name %></b>.</p>
+    <p class="content-lg">Deseja permitir?</p>
+    <form action="/api/oauth2/authorize" method="post">
+      <input name="transaction_id" type="hidden" value="<%= transactionID %>">
+      <input type="hidden" name="client_id" value="<%= client.oauth_id %>">
+      <input type="hidden" name="response_type" value="<%= response_type %>">
+      <input type="hidden" name="auth_url" value="<%= decodeURIComponent(currentURL) %>">
+      <%if(scopes) { %>
+      <input type="hidden" name="scope" value="<%= scopes.join(',') %>">
+      <% } %>
+      <div style="margin-top: 20px">
+        <input class="button-allow" type="submit" value="Permitir" id="allow">
+        <input class="button-disallow" type="submit" value="Bloquear" name="cancel" id="deny">
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
