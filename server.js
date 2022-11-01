@@ -106,7 +106,7 @@ mongoose.connect(db_uri,{ useNewUrlParser: true, useUnifiedTopology: true,  useC
   
 
     // Start the app by listening on the default port or the 8090 one
-     http.listen(process.env.PORT || 8090, () => {
-         console.log("Server running on port 8090");
+     http.listen(process.env.PORT || 3000, () => {
+         console.log("Server running on port 3000");
      })
 });
