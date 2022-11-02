@@ -8,14 +8,20 @@ var mailer = nodemailer.createTransport({
     set name(value) {
         this._name = value;
     },
-    host: "vps-3780334.agte.com.br",
-    service: "vps-3780334.agte.com.br",
-    port: 465,
-    secure: true,
-    auth:{
-        user: "suporte@casas.ind.br",
-        pass: "!.0.{qxQ)bVx"
-        /***pass: "uKy$/ut5"***/
+    //host: "vps-3780334.agte.com.br",
+    //service: "vps-3780334.agte.com.br",
+    //port: 465,
+    //secure: true,
+    //auth:{
+    //    user: "suporte@casas.ind.br",
+    //    pass: "!.0.{qxQ)bVx"
+    //    /***pass: "uKy$/ut5"***/
+    //}
+    host: "smtp.mailtrap.io",
+    port: 2525,
+    auth: {
+      user: "d675728773e608",
+      pass: "9ca116d3c03adb"
     }
 });
 
