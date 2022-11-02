@@ -92,21 +92,21 @@ mongoose.connect(db_uri,{ useNewUrlParser: true, useUnifiedTopology: true,  useC
     });
 
     // Setup for HTTPS
-    const optionsHttps = {
-        key: fs.readFileSync('ssl/privkey.pem', 'utf8'),
-        cert: fs.readFileSync('ssl/fullchain.pem', 'utf8'),
-        rejectUnauthorized: false,
-        requestCert: false
-    };
+ //   const optionsHttps = {
+ //       key: fs.readFileSync('ssl/privkey.pem', 'utf8'),
+  //      cert: fs.readFileSync('ssl/fullchain.pem', 'utf8'),
+  //      rejectUnauthorized: false,
+  //      requestCert: false
+  //  };
 
     //Start the app using HTTPS options on the 8090 port
-    https.createServer(optionsHttps, app).listen(8090, function () {
-        console.log("HTTPS server started at port 8090");
-    });
+ //   https.createServer(optionsHttps, app).listen(8090, function () {
+ //       console.log("HTTPS server started at port 8090");
+  //  });
   
 
     // Start the app by listening on the default port or the 8090 one
-//     http.listen(process.env.PORT || 3000, () => {
-//         console.log("Server running on port 3000");
-//     })
+     http.listen(process.env.PORT || 3000, () => {
+         console.log("Server running on port 3000");
+     })
 });
