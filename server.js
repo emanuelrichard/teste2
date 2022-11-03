@@ -18,7 +18,7 @@ const checkAuth = Auth.isAuthenticated
 
 // Connect DB
 //const db_uri = "mongodb://localhost:27017/cas_tubs";
-const db_uri = "mongodb+srv://teste:<password>@cluster1.082mlvz.mongodb.net/test"; // Encrypted
+const db_uri = "mongodb+srv://teste:teste@cluster1.082mlvz.mongodb.net/test"; // Encrypted
 mongoose.connect(db_uri,{ useNewUrlParser: true, useUnifiedTopology: true,  useCreateIndex: true }, function(err, client) {
 
     // Connection unsuccessful
