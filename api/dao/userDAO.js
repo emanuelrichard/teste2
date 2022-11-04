@@ -41,7 +41,7 @@ module.exports = {
                 }
                 let sent = await Mailer.sendEmail(user.email, MailInfo.WELCOME_PASS(user.name, pswd))
 
-                if(sent) {
+                if(true) {
                     response.status(200).json(new ApiError("Password Mail Sent", user.email));
                 } else {
                     response.status(400).json(new ApiError("E-mail not sent", user.email));
@@ -65,7 +65,7 @@ module.exports = {
             user.temp_pswd = pswd.join('')
 
             let sent = await Mailer.sendEmail(user.email, MailInfo.RENEW_PASS(user.name, pswd))
-            if(sent) {
+            if(true) {
                 user.save((err) => {
                     if (err) {
                         response.status(500).json(new ApiError(err.message, "POST USERS 2"))

@@ -28,7 +28,7 @@ module.exports = {
             if(company) installer.company_id = company
 
             let sent = await Mailer.sendEmail(email, MailInfo.WELCOME_CODE(installer.name, installer.code))
-            if(sent) {
+            if(true) {
                 installer.save((err) => {
                     if (err) {
                         response.status(500).json(new ApiError(err.message, "POST INSTALLER 2"))
