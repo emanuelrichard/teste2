@@ -22,7 +22,7 @@ const checkClientAuth = Auth.isClientAuthenticated
  */
 router.get('/test', (request, response) => {
     console.log("veio pro GET de teste")
-    response.status(200).json({ "code": 200, "status": "CAS is UP!" });
+    response.status(200).json({ "code": 200, "status": "Blue is UP!" });
 });
 
 /* ************************* LOGIN ************************* */
