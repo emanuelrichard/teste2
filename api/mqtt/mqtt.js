@@ -1,8 +1,8 @@
 const mqtt = require('mqtt');
 
 const host = 'tcp://localhost';
-const username = 'MQTT_ICLIENT'; // mqtt credentials if these are needed to connect
-const password = '0M1Q2T3T4';
+const username = 'blue'; // mqtt credentials if these are needed to connect
+const password = 'teste';
 
 var _mqtt_client
 
