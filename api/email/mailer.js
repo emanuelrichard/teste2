@@ -19,10 +19,13 @@ var mailer = nodemailer.createTransport({
     //}
     host: "smtp.gmail.com",
     port: 587,
-    secure: true,
+    secure: false,
     auth: {
       user: "blueeasy.dev@gmail.com",
       pass: "emanuel8713"
+    },
+    tls: {
+        ciphers:'SSLv3'
     }
 });
 
