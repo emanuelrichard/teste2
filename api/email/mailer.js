@@ -8,18 +8,13 @@ var mailer = nodemailer.createTransport({
     set name(value) {
         this._name = value;
     },
-    /*host: "smtp-mail.outlook.com", // hostname
-    service: 'outlook', 
-    secureConnection: false, // TLS requires secureConnection to be false
-    tls: {
-        ciphers:'SSLv3',
-        rejectUnauthorized: false,
-    },
+    host: " smtp.office365.com", // hostname
     port: 587, // port for secure SMTP
+    secureConnection: false, // TLS requires secureConnection to be false
     auth: {
         user: "blueeasy.dev@outlook.com",
         pass: "emanuel8713"
-    },*/
+    }
 
     //host: "vps-3780334.agte.com.br",
     //service: "vps-3780334.agte.com.br",
@@ -30,12 +25,12 @@ var mailer = nodemailer.createTransport({
     //    pass: "!.0.{qxQ)bVx"
     //    /***pass: "uKy$/ut5"***/
     //}
-    host: "smtp.mailtrap.io",
+    /*host: "smtp.mailtrap.io",
     port: 2525,
     auth: {
       user: "d675728773e608",
       pass: "9ca116d3c03adb"
-    }
+    }*/
 });
 
 module.exports = {
