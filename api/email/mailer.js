@@ -1,13 +1,13 @@
 var nodemailer = require('nodemailer');
 
 var mailer = nodemailer.createTransport({
-    /*_name: "suporte@casas.ind.br",
+    _name: "blueeasy.dev@gmail.com",
     get name() {
         return this._name;
     },
     set name(value) {
         this._name = value;
-    },*/
+    },
     //host: "vps-3780334.agte.com.br",
     //service: "vps-3780334.agte.com.br",
     //port: 465,
@@ -17,11 +17,11 @@ var mailer = nodemailer.createTransport({
     //    pass: "!.0.{qxQ)bVx"
     //    /***pass: "uKy$/ut5"***/
     //}
-    host: "smtp.mailtrap.io",
-    port: 2525,
+    host: "smtp.gmail.com",
+    port: 587,
     auth: {
-      user: "d675728773e608",
-      pass: "9ca116d3c03adb"
+      user: "blueeasy.dev@gmail.com",
+      pass: "emanuel8713"
     }
 });
 
@@ -31,7 +31,7 @@ module.exports = {
     async sendEmail(mail, mailinfo) {
         try {
             var emailInfo = {
-                from: "Controle CAS - Suporte <suporte@casas.ind.br>",
+                from: "Controle Blue Easy - Suporte <blueeasy.dev@gmail.com>",
                 to: mail,
                 subject: mailinfo[0],
                 html: mailinfo[1]
@@ -49,7 +49,7 @@ module.exports = {
     async sendEmails(maillist, mailInfo) {
         try {
             var emailInfo = {
-                from: "Controle CAS - Suporte <suporte@casas.ind.br>",
+                from: "Controle Blue Easy - Suporte <blueeasy.dev@gmail.com>",
                 to: maillist,
                 subject: mailinfo[0],
                 html: mailInfo[1]
