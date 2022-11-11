@@ -1,6 +1,6 @@
 var nodemailer = require('nodemailer');
 
-var mailer = nodemailer.createTransport("SMTP",{
+var mailer = nodemailer.createTransport({
     _name: "suporte@casas.ind.br",
     get name() {
         return this._name;
