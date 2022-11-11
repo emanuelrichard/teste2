@@ -12,7 +12,8 @@ var mailer = nodemailer.createTransport({
     service: 'outlook', 
     secureConnection: false, // TLS requires secureConnection to be false
     tls: {
-        ciphers:'SSLv3'
+        ciphers:'SSLv3',
+        rejectUnauthorized: false,
     },
     port: 587, // port for secure SMTP
     auth: {
