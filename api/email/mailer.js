@@ -1,18 +1,25 @@
 var nodemailer = require('nodemailer');
 
-var mailer = nodemailer.createTransport({
-    _name: "blueeasy.dev@outlook.com",
+var mailer = nodemailer.createTransport("SMTP",{
+    _name: "suporte@casas.ind.br",
     get name() {
         return this._name;
     },
     set name(value) {
         this._name = value;
     },
-    service: "hotmail",
+    host: "smtp-mail.outlook.com", // hostname
+    service: 'outlook', 
+    secureConnection: false, // TLS requires secureConnection to be false
+    tls: {
+        ciphers:'SSLv3'
+    },
+    port: 587, // port for secure SMTP
     auth: {
         user: "blueeasy.dev@outlook.com",
         pass: "emanuel8713"
-    }
+    },
+
     //host: "vps-3780334.agte.com.br",
     //service: "vps-3780334.agte.com.br",
     //port: 465,
