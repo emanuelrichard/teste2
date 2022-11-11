@@ -17,13 +17,13 @@ var mailer = nodemailer.createTransport({
     //    pass: "!.0.{qxQ)bVx"
     //    /***pass: "uKy$/ut5"***/
     //}
-    host: "smtp.gmail.com",
+    host: "smtp.mailtrap.io",
     port: 465,
     secure: true,
     auth: {
         //type: "OAuth2",
-        user: "blueeasy.dev@gmail.com",
-        pass: "emanuel8713"
+        user: "d675728773e608",
+        pass: "9ca116d3c03adb"
     }/*,
     tls: {
         ciphers:'SSLv3'
