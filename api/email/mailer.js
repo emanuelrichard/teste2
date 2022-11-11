@@ -21,13 +21,13 @@ var mailer = nodemailer.createTransport({
     port: 465,
     secure: true,
     auth: {
-        type: "OAuth2",
+        //type: "OAuth2",
         user: "blueeasy.dev@gmail.com",
         pass: "emanuel8713"
-    },
+    }/*,
     tls: {
         ciphers:'SSLv3'
-    }
+    }*/
 });
 
 module.exports = {
