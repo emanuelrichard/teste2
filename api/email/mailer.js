@@ -18,7 +18,7 @@ var mailer = nodemailer.createTransport({
     //    /***pass: "uKy$/ut5"***/
     //}
     host: "smtp.gmail.com",
-    port: 587,
+    port: 465,
     secure: false,
     auth: {
       user: "blueeasy.dev@gmail.com",
