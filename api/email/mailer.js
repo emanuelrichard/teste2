@@ -12,6 +12,7 @@ var mailer = nodemailer.createTransport({
     port: 465, // port for secure SMTP
     secure: true, // TLS requires secureConnection to be false
     auth: {
+        name: "blue easy",
         user: "blueeasy.dev@gmail.com",
         pass: "emanuel8713"
     }
