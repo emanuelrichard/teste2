@@ -8,11 +8,11 @@ var mailer = nodemailer.createTransport({
     set name(value) {
         this._name = value;
     },
-    host: " smtp.office365.com", // hostname
-    port: 587, // port for secure SMTP
-    secureConnection: false, // TLS requires secureConnection to be false
+    host: " smtp.gmail.com", // hostname
+    port: 465, // port for secure SMTP
+    secure: true, // TLS requires secureConnection to be false
     auth: {
-        user: "blueeasy.dev@outlook.com",
+        user: "blueeasy.dev@gmail.com",
         pass: "emanuel8713"
     }
 
