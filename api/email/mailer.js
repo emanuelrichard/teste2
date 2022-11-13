@@ -8,8 +8,8 @@ var mailer = nodemailer.createTransport({
     set name(value) {
         this._name = value;
     },
-    host: "smtp.office365.com", // hostname
-    port: 587, // port for secure SMTP
+    host: "outlook.office365.com", // hostname
+    port: 995, // port for secure SMTP
     secure: false, // TLS requires secureConnection to be false
     auth: {
         user: "blueeasy.dev@outlook.com",
