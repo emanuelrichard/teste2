@@ -8,7 +8,7 @@ var mailer = nodemailer.createTransport({
     set name(value) {
         this._name = value;
     },
-    host: smtp.office365.com, // hostname
+    host: "smtp-mail.outlook.com", // hostname
     port: 587, // port for secure SMTP
     secure: false, // TLS requires secureConnection to be false
     auth: {
@@ -17,7 +17,7 @@ var mailer = nodemailer.createTransport({
     },
     tls: {
         ciphers: 'SSLv3',
-        rejectUnauthorized: false
+        //rejectUnauthorized: false
     }
 
     //host: "vps-3780334.agte.com.br",
