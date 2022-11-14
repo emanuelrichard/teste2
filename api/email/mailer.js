@@ -8,17 +8,13 @@ var mailer = nodemailer.createTransport({
     set name(value) {
         this._name = value;
     },
-    host: "smtp-mail.outlook.com", // hostname
+    host: "smtp.gmail.com", // hostname
     port: 587, // port for secure SMTP
     secure: false, // TLS requires secureConnection to be false
     auth: {
-        user: "blueeasy.dev@outlook.com",
-        pass: "emanuel8713"
+        user: "blueeasy.dev@gmail.com",
+        pass: "gyfghegohqzswbdx"
     },
-    tls: {
-        ciphers: 'SSLv3',
-        //rejectUnauthorized: false
-    }
 
     //host: "vps-3780334.agte.com.br",
     //service: "vps-3780334.agte.com.br",
