@@ -1,19 +1,20 @@
 var nodemailer = require('nodemailer');
 
 var mailer = nodemailer.createTransport({
-    _name: "suporte@casas.ind.br",
+    /*_name: "suporte@casas.ind.br",
     get name() {
         return this._name;
     },
     set name(value) {
         this._name = value;
-    },
+    },*/
     host: "smtp.gmail.com", // hostname
-    port: 465, // port for secure SMTP
-    secure: true, // TLS requires secureConnection to be false
+    port: 587, // port for secure SMTP
+    secure: false, // TLS requires secureConnection to be false
     auth: {
         user: "blueeasy.dev@gmail.com",
-        pass: "gyfghegohqzswbdx"
+        pass: "hlxsjraxqnuvhnvm"
+        //pass: "yswxuaxsyfgxzswv"
     },
 
     //host: "vps-3780334.agte.com.br",
@@ -32,6 +33,22 @@ var mailer = nodemailer.createTransport({
       pass: "9ca116d3c03adb"
     }*/
 });
+
+/*var details = {
+    from: "blueeasy.dev@gmail.com",
+    to: "blueeasy.dev@gmail.com",
+    subject: "Testando node mailer",
+    text: "Primeiro mail"
+}
+
+mailer.sendMail(details,(err)=>{
+    if(err){
+        console.log("Error ocorrido")
+    }
+    else{
+        console.log("Email enviado")
+    }
+})*/
 
 module.exports = {
 
